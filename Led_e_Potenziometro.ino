@@ -1,23 +1,12 @@
-int Ledpin = 9; //Il pin a cui è connesso il led 
+int Ledpin = 9; // The pin to which the LED is connected
 
- 
+void setup() {
+  pinMode(Ledpin, OUTPUT); // Set the pin as output
+}
 
-void setup() { 
-
-pinMode(Ledpin, OUTPUT); //Il pin è in uscita 
-
-} 
-
- 
-
-void loop() { 
-
-digitalWrite(Ledpin, HIGH); //Il led è acceso 
-
-delay(analogRead(0)); //Attendi il valore letto dal pin analogico 0 
-
-digitalWrite(Ledpin, LOW); //Spegni il led 
-
-delay(analogRead(0)); //Attendi nuovamente il tempo letto dal pin analogico 0 
-
+void loop() {
+  digitalWrite(Ledpin, HIGH); // Turn on the LED
+  delay(analogRead(0)); // Wait for the value read from analog pin 0
+  digitalWrite(Ledpin, LOW); // Turn off the LED
+  delay(analogRead(0)); // Wait again for the time read from analog pin 0
 }
